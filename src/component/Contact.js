@@ -12,7 +12,7 @@ export default function Contact() {
             <div className="contact_center">
              <p className="contact_details"><strong>Contact Number 1: </strong>{user_details.Logininfocontext.contact1}</p>
              <p className="contact_details"><strong>Contact Number 2:</strong> {user_details.Logininfocontext.contact2}</p>
-             <p className="contact_details"><strong>Email:</strong> pranjulsrivastava0309@gmail.com</p>
+             <p className="contact_details"><strong>Email:</strong> pranjulsrivastava0309@gmail</p>
              <p className="contact_details"><strong>Contact Address :</strong> {user_details.Logininfocontext.Address} , {user_details.Logininfocontext.City} </p>
              <p className="contact_details"><strong>Pincode:</strong> 208013</p>
             </div>
