@@ -39,7 +39,7 @@ export default function Weather() {
             <div className="left_weather">
               <p1>Hello {user_details.Logininfocontext.FirstName} {user_details.Logininfocontext.LastName}</p1><br/>
               <p1>{user_details.Logininfocontext.City} , {user_details.Logininfocontext.State}</p1><br/><br/>
-              <p2>{today.getDate()}  </p2> Jan , Thu
+              <p2>{today.getDate()}  </p2> Feb , Thu
             </div>
             <div className="right_weather">
             <br/><br/>
