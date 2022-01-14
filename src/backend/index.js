@@ -1,20 +1,11 @@
 var express= require("express");
 var app = express();
 
+
 var cors= require('cors');
 app.use(cors());
 
 app.use(express.json());
-
-var mongoose= require('mongoose');
-
-var user_schema1= require('./schema/Employee_details');
-var user_schema2= require('./schema/Employee_info');
-var url="mongodb+srv://pranjul03:NMGRBkFYniE48QoQ@cluster0.3gl2o.mongodb.net/Employee_database?retryWrites=true&w=majority";
-
-
-var jwt= require('jsonwebtoken');
-var mysalt="1234567890"
 
 
 app.listen(8080 ,(err)=>{
@@ -22,10 +13,20 @@ app.listen(8080 ,(err)=>{
     console.log("server started successfully")
 })
 
+var mongoose= require('mongoose');
+
+var user_schema1= require('./schema/Employee_details');
+var user_schema2= require('./schema/Employee_info');
+var url="mongodb+srv://pranjul03:NMGRBkFYniE48QoQ@cluster0.3gl2o.mongodb.net/Employee_database?retryWrites=true&w=majority";
+
 mongoose.connect(url , (err)=>{
     if(err) console.log(err)
     console.log("database connection successful")
 })
+
+var jwt= require('jsonwebtoken');
+var mysalt="1234567890"
+
 
 app.post('/Signup' ,async(req,res)=>{
     

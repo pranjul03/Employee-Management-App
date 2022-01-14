@@ -21,9 +21,9 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
 
-export default function Employee_table() {
 
-  const user_details = useContext(noteContext);
+export default function Employee_update() {
+const user_details = useContext(noteContext);
   const history = useHistory();
 
   function createData(name, calories, fat, carbs, protein) {
@@ -57,11 +57,12 @@ export default function Employee_table() {
            }
        })
       }
-
   }
-  return (
-    <>
-      <div className="right_div_header2">
+
+
+    return (
+        <>
+           <div className="right_div_header2">
         <p className="company_name">Company</p>
 
         <div className="logout_button">
@@ -86,17 +87,15 @@ export default function Employee_table() {
               <TableHead>
                 <TableRow>
                   <TableCell>Dessert (100g serving)</TableCell>
-                  <TableCell align="right">Calories</TableCell>
-                  <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                  <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                  <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                  <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                  <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                  <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                  <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                  <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                  <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                  <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                  <TableCell align="right">Name</TableCell>
+                  <TableCell align="right">Email&nbsp;(g)</TableCell>
+                  <TableCell align="right">Contact&nbsp;(g)</TableCell>
+                  <TableCell align="right">Address&nbsp;(g)</TableCell>
+                  <TableCell align="right">Date of Birth&nbsp;(g)</TableCell>
+                  <TableCell align="right">Reporting Manager&nbsp;(g)</TableCell>
+                  <TableCell align="right">Department&nbsp;(g)</TableCell>
+                  <TableCell align="right">Employee code&nbsp;(g)</TableCell>
+                  
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -112,13 +111,11 @@ export default function Employee_table() {
                     <TableCell align="right">{row.fat}</TableCell>
                     <TableCell align="right">{row.carbs}</TableCell>
                     <TableCell align="right">{row.protein}</TableCell>
-                    <TableCell align="right">{row.protein}</TableCell>
-                    <TableCell align="right">{row.protein}</TableCell>
-                    <TableCell align="right">{row.protein}</TableCell>
-                    <TableCell align="right">{row.protein}</TableCell>
-                    <TableCell align="right">{row.protein}</TableCell>
-                    <TableCell align="right">{row.protein}</TableCell>
-                    <TableCell align="right">{row.protein}</TableCell>
+                    <TableCell align="right"><input type="text"/></TableCell>
+                    <TableCell align="right"><input type="text"/></TableCell>
+                    <TableCell align="right"><input type="text"/></TableCell>
+                    <TableCell align="right"><input type="text"/></TableCell>
+                    <TableCell align="right"><input type="text"/></TableCell>
                   </TableRow>
                 ))}
               </TableBody>
@@ -126,6 +123,7 @@ export default function Employee_table() {
           </TableContainer>
         </div>
       </div>
-    </>
-  );
+            
+        </>
+    );
 }

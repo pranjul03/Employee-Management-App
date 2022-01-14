@@ -10,6 +10,7 @@ import Contact from './component/Contact'
 import Performance from './component/Performance'
 import Empheader from './component/Empheader'
 import Employee_table from './component/Employee_table'
+import Employee_update from './component/Employee_update'
 import {
   BrowserRouter as Router,
   Switch,
@@ -33,6 +34,12 @@ function App() {
           </Route>
           <Route exact path="/employee">
             <Employee/>
+          </Route>
+          <Route exact path="/employee_table">
+            <Employee_table/>
+          </Route> 
+           <Route exact path="/employee_update">
+            <Employee_update/>
           </Route>
       </Switch>
     </Router>
